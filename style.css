@@ -2,14 +2,5 @@ body{
     background: lightblue;
     text-align: center;
     margin: 0;
-    padding: 0;
 }
 
-.header{
-    height: 300vh;
-    width: 50%;
-    background-image: linear-gradient(rgba(4,9,30,0.7) ,rgba(4,9,30,0.7)), url(Images/OrangeFish.png);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
