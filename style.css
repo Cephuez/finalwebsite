@@ -5,8 +5,9 @@ body{
 }
 
 .header{
-    height: 300vh;
-    width: 50%;
+    height: 400px;
+    width: 200px;
+    object-fit: contain;
     background-image: linear-gradient(rgba(199, 203, 216, 0.7) ,rgba(207, 212, 231, 0.7)), url(Images/OrangeFish.png);
     background-position: center;
     background-size: cover;
