@@ -9,7 +9,7 @@
     width: 100%;
     object-fit: contain;
     /*linear-gradient(rgba(199, 203, 216, 0.7) ,rgba(207, 212, 231, 0.7)), */
-    background-image: url(Images/OrangeFish.png);
+    background-image: url(Images/background.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
