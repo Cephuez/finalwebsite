@@ -15,8 +15,8 @@
     <section class="header">
         <nav>
             <a href="index.html"><img src="Images/LogoFish.png"></a>
-            <div class="nav-links">
-                <i class="fa fa-times"></i>
+            <div class="nav-links" id="navLinks"> 
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li>
@@ -25,7 +25,7 @@
                     <li><a href="">CONTACT</a></li>
                 </ul>
             </div>
-            <i class="fa fa-bars"></i>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
 
         <div class="text-box">
@@ -47,5 +47,18 @@
         Hello there folks.
     </p>
     
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
 </body>
 </html>
