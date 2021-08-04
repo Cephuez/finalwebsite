@@ -77,3 +77,12 @@ nav img{
     font-size: 14px;
     color: #fff;
 }
+
+.hero-tbn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px;
+    
+}
