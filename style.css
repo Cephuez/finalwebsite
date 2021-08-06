@@ -78,7 +78,7 @@ nav img{
     color: #fff;
 }
 
-.hero-tbn{
+.hero-btn{
     display: inline-block;
     text-decoration: none;
     color: #fff;
@@ -90,7 +90,7 @@ nav img{
     cursor: pointer;
 }
 
-hero-tbn:hover{
+.hero-btn:hover{
     border: 1px solid #f44336;
     background: #f44336;
     transition: 1s;
