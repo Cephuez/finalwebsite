@@ -90,11 +90,6 @@ nav img{
     cursor: pointer;
 }
 
-.hero-btn:hover{
-    border: 1px solid #f44336;
-    background: #f44336;
-    transition: 1s;
-}
 nav .fa{
     display: none;
 }
