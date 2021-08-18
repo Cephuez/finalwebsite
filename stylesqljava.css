@@ -1,0 +1,30 @@
+html, body, *{
+    padding: 0;
+    margin: 0;
+}
+#description{
+    height: 100%;
+    margin: 0;
+    padding-top: 40;
+    text-align: center;
+}
+
+#img {
+    padding: 0;
+    margin: 0;
+    width: 10%;
+    min-width: 350px;
+    vertical-align: top;
+}
+
+p {
+    text-align: left;
+    font-size: 20px;
+    width: 49%;
+    min-width: 350px;
+    display: inline-block;
+    padding-left: 10px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color:black;
+}

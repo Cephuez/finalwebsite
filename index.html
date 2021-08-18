@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saul Sonido Perez World</title>
+    <title>Saul Sonido Perez</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,14 +13,11 @@
 <body>
     <section class="header">
         <nav>
-            <a href="index.html"><img src="Images/LogoFish.png"></a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="">HOME</a></li>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">COURSE</a></li>
-                    <li><a href="">BLOG</a></li>
+                    <li><a href="">PROJECTS</a></li>
                     <li><a href="">CONTACT</a></li>
                 </ul>
             </div>
@@ -28,35 +25,155 @@
         </nav>
 
         <div class="text-box">
-            <h1>Saul's World!!!</h1>
-            <p>In this part I will show you some sample of the code I've written to the world! <br>It's 
-                super pogger!
-            </p>
+            <h1>Saul Sonido Perez</h1>
             <a href="" class="hero-btn">Click This To See Some Of My Work</a>
-
         </div>
     </section>
-    <h1>
-        Pollo Loco!!!
-    </h1>
 
-    <a href="/finalwebsite/contact.html">Contact</a>
-
-    <p>
-        Hello there folks.
+<!----Introduction---->
+<section class='introduction'>
+    <h1>Introduction</h1>
+    <p>Hello. I'm Saul Sonido Perez. I recently graduated from the University of Arizona
+        on May/2021 with a Bachelor of Science in Computer Science. 
+        I've worked with many different projects by constructing android projects, develop
+        programmed video games, constructed a website with its own server, and mimic the
+        behavior of a CPU.
     </p>
+</section>
 
+<!----course------>
+<section class="course">
+    <h1>My Projects</h1>
+
+    <div class="row">
+        <div class="course-col">
+            <a href="sqljava.html">SQL/Java Server Project</a>
+            <!--<h3>SQL/Java Server Project</h3>-->
+            <p>Programmed a Pet Adoption Website where users can register and put their
+                pets up for adoption. 
+            </p>
+        </div>
+
+        <div class="course-col">
+            <a href="androidproject.html">Android Project</a>
+            <p>Programmed a few projects working with Android Studio working with many
+                features such as APIs and using Contacts.
+            </p>
+        </div>
+
+        <div class="course-col">
+            <a href="unityproject.html">Unity Project</a>
+            <p>
+                Programmed several videogame projects and a social mobile application.
+            </p>
+        </div>
+    
+        <div class="course-col">
+            <a href="cpuproject.html">CPU Mimic Project</a>
+            <p>
+                Using C language, I replicated a CPU by programming a system that can rellocate memory
+                around the system.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- campus -->
+<section class="campus">
+    <h1>Our Global Campus</h1>
+    <p>Some info about our campus and stuff</p>
+
+    <div class="row">
+        <div class="campus-col">
+            <img src="Images/OrangeFish.png">
+            <div class="layer">
+                <h3>FISHY</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="Images/OrangeFish.png">
+            <div class="layer">
+                <h3>FISHY2</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="Images/OrangeFish.png">
+            <div class="layer">
+                <h3>FISHY3</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--- Facilities --->
+<section class="facilities">
+    <h1>Our Facilities</h1>
+    <p>Random information about our facility and something else or something...</p>
+
+    <div class="row">
+        <div class="facilities-col">
+            <img src="Images/Kitten Pic.jpg">
+            <h3>World Class Website Coding Stuff By Cephy</h3>
+            <p>
+                In here you will finally see some excerpt from my code so you can see what
+                I can do and stuff XD.
+            </p>
+        </div>
+
+        <div class="facilities-col">
+            <img src="Images/Kitten Pic.jpg">
+            <h3>World Class Website Coding Stuff By Cephy</h3>
+            <p>
+                In here you will finally see some excerpt from my code so you can see what
+                I can do and stuff XD.
+            </p>
+        </div>
+
+        <div class="facilities-col">
+            <img src="Images/Kitten Pic.jpg">
+            <h3>World Class Website Coding Stuff By Cephy</h3>
+            <p>
+                In here you will finally see some excerpt from my code so you can see what
+                I can do and stuff XD.
+            </p>
+        </div>
+    </div>
+    
+</section>
+
+<!-- testimonials -->
+<section class="testimonials">
+    <h1>What Our Students Says</h1>
+    <p>A lot of stuff is said about our facilitiy that it's nuts xd</p>
+
+    <div class="row">
+        <div class="testimonial-col">
+            <img src="Images/HuskyPic.jpg">
+            <div>
+                <p>Bark bark bark barkarkark. Good school and stuff Bark...</p>
+                <h3>Husky Hughes</h3>
+            </div>
+        </div>
+        <div class="testimonial-col">
+            <img src="Images/HuskyPic.jpg">
+            <div>
+                <p>Bark bark bark barkarkark. Good school and stuff Bark...</p>
+                <h3>Husky Hughes</h3>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!------Javascript for Toggle Menu----->
 <script>
-    var navLinks = document.getElementById("navLinks");
+    var nLinks = document.getElementById("navLinks");
 
     function showMenu(){
-        navLinks.style.right = "0";
+        nLinks.style.right = "0";
     }
 
     function hideMenu(){
-        navLinks.style.right = "-200px";
+        nLinks.style.right = "-200px";
     }
 </script>
 

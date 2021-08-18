@@ -1,0 +1,30 @@
+/*---- facilities ---*/
+
+.videogamesection{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.game{
+    flex-basis:31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.game img{
+    width: 40%;
+    border-radius: 10px;
+}
+
+.game p{
+    padding: 0;
+}
+
+.game h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
