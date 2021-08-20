@@ -1,0 +1,22 @@
+void
+P2ProcInit(void) 
+{
+    int rc;
+
+    rc = P1_LockCreate("User",&userLID);
+    rc = P1_CondCreate("User",userLID,&userVID);
+    rc = P1_Lock(userLID);
+
+    USLOSS_IntVec[USLOSS_ILLEGAL_INT] = IllegalHandler;
+    USLOSS_IntVec[USLOSS_SYSCALL_INT] = SyscallHandler;
+
+    // call P2_SetSyscallHandler to set handlers for all system calls
+    rc = P2_SetSyscallHandler(SYS_SPAWN, SpawnStub);
+    rc = P2_SetSyscallHandler(SYS_WAIT, SpawnStub);
+    rc = P2_SetSyscallHandler(SYS_TERMINATE, SpawnStub);
+    rc = P2_SetSyscallHandler(SYS_GETPROCINFO, SpawnStub);
+    rc = P2_SetSyscallHandler(SYS_GETPID, SpawnStub);
+    rc = P2_SetSyscallHandler(SYS_GETTIMEOFDAY, SpawnStub);
+
+    assert(rc == P1_SUCCESS);
+}

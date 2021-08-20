@@ -1,0 +1,12 @@
+---
+:id: 65755944
+:submitters:
+- :name: Saul Sonido Perez
+  :email: cephuez@email.arizona.edu
+:created_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2021-02-20 00:31:01.164206000 Z
+  zone: !ruby/object:ActiveSupport::TimeZone
+    name: America/Los_Angeles
+  time: 2021-02-19 16:31:01.164206000 Z
+:status: processed
+:score: 40.0

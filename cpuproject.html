@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unity Project</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styleunity.css">
     <link rel="stylesheet" href="stylesqljava.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,33 +31,45 @@
             </div>
         </section>
 
+
+        <p>
+            A quick summary of programming my CPU project in C. I worked with processes and threadings 
+            in order to make sure that memory management is not disrupted. I made sure 
+            to synchronize my program to ensure mutual exclusion and critical section. 
+            If I were to allow processes to input information without an order, then 
+            memory would be updated too soon or late for it to be accessed. 
+        </p>
         <div id="description">
             <img src="Images/HuskyPic.jpg" id="img">
-            <p>Talk about the image next to this image and stuff. 
-                Talk about the image next to this image and stuff.
-                Talk about the image next to this image and stuff. 
-                Talk about the image next to this image and stuff. 
-                Talk about the image next to this image and stuff
+            <p> 
+                I made sure to code in the <a href="CPUCodeText/CPULocks1.txt">locks</a> 
+                and <a href="CPUCodeText/CPUCond1.txt">conditions</a> so I can know what 
+                processes to use when active. If you want to view my code in more details 
+                on how I lock processes, free them, etc, I have linked my project to the
+                site at the top under phase1a, phase1b, phase1c, and phase1d.
             </p>
         </div>
 
         <div id="description">
             <img src="Images/HuskyPic.jpg" id="img">
-            <p>Talk about the image next to this image and stuff. 
-                Talk about the image next to this image and stuff.
-                Talk about the image next to this image and stuff. 
-                Talk about the image next to this image and stuff. 
-                Talk about the image next to this image and stuff
+            <p> Using locks and conditions in order to organize my processes, I was able
+                to use <a href="CPUCodeText/CPUHandlers1.txt">System Call Handlers</a>. Some examples is calling 'Wait' for a proccess
+                to hault, 'Terminate' to delete a process, 'GetPid' to get the process' ID, 
+                and 'GetTimeOfDay' to get the time of the day set on the CPU. All of these
+                handlers are stored inside an array of Interrupt Vectors. Depending if it is 
+                an Illegal Interrupt or System Call, it will call certain handlers to deal with 
+                the issue. Check Phase2a-Phase2d.
             </p>
         </div>
 
         <div id="description">
             <img src="Images/HuskyPic.jpg" id="img">
-            <p>Talk about the image next to this image and stuff. 
-                Talk about the image next to this image and stuff.
-                Talk about the image next to this image and stuff. 
-                Talk about the image next to this image and stuff. 
-                Talk about the image next to this image and stuff
+            <p> When it came to storing data into memory, I used virtual addresses in order to 
+                give them a position in the storage space. I approached it through paging in 
+                <a href="CPUCodeText/CPUFrame.txt">frames</a>. These frames are giving a process ID
+                to distinguish it from other processes, page boolean to see if it's set up, and 
+                a free boolean to see if that area is free to be accessed or not. Look under Phase3a
+                and Phase3b for further details.
             </p>
         </div>
 

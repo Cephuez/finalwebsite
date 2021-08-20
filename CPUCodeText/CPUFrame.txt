@@ -1,0 +1,29 @@
+int
+P3FrameInit(int pages, int frames)
+{
+    int result = P1_SUCCESS;
+
+    CHECKKERNEL();
+    if(p3FrameInitialized){
+	return P3_ALREADY_INITIALIZED;
+    }
+
+    p3FrameInitialized = 1;
+
+    // initialize the frame data structures, e.g. the pool of free frames
+    frameArray = malloc(sizeof(struct FrameArray) * frames);
+    for(int i = 0; i < frames; i++){
+	frameArray[i].pid = -1; // There is not PID assigned
+	frameArray[i].page = 0; // Page is set to 0
+	frameArray[i].free = 1;	// Frame is Free
+    }
+
+    // Record down the number of pages and frames
+    numPages = pages;
+    numFrames = frames;
+
+    // set P3_vmStats.freeFrames
+    P3_vmStats.freeFrames = frames;
+
+    return result;
+}

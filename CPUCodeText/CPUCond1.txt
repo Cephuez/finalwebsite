@@ -1,0 +1,51 @@
+
+int P1_CondCreate(char *name, int lid, int *vid) {
+    int result = P1_SUCCESS;
+    int length = 0;
+    int condIndex = 0;
+    CHECKKERNEL();
+
+    // more code here
+    if(name[0] == 0)
+	return P1_NAME_IS_NULL;
+
+    while(1){
+        if(length > P1_MAXNAME)
+                return P1_NAME_TOO_LONG;
+        if(name[length] == 10)
+                break;
+        length += 1;
+    }
+
+    for(int i = 0; i < P1_MAXCONDS; i++){
+	if(!strcmp(conditions[i].name,name))
+		return P1_DUPLICATE_NAME;
+    }
+
+    for(int i = 0; i < P1_MAXCONDS; i++){
+	if(conditions[i].inuse == FALSE){
+		condIndex += 1;
+		break;
+        }
+	if(i == P1_MAXCONDS - 1)
+		return P1_TOO_MANY_CONDS;
+    }
+
+    for(int i = 0; i < P1_MAXLOCKS; i++){
+	if(locks[i].lid == lid){
+		locks[i].vid = *vid;
+		break;
+	}
+	if(i == P1_MAXLOCKS - 1)
+		return P1_INVALID_LOCK;
+    }
+
+    // Not sure about in use status
+    conditions[condIndex].inuse = FALSE;
+    strcpy(conditions[condIndex].name,name);
+    conditions[condIndex].lock = lid;
+    *vid = conditions[condIndex].vid;
+    conditions[condIndex].queueIndex = 0;
+
+    return result;
+}

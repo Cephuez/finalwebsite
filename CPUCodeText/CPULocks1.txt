@@ -1,0 +1,47 @@
+
+int P1_LockCreate(char *name, int *lid)
+{
+    int result = P1_SUCCESS;
+    int length = 0;
+    int freeIndex = 0;
+    CHECKKERNEL();
+
+    // disable interrupts
+    int interrupt =  P1DisableInterrupts();
+
+    // check parameters
+    if(name[0] == 0)
+	return P1_NAME_IS_NULL;
+
+    while(1){
+	if(length > P1_MAXNAME)
+		return P1_NAME_TOO_LONG;
+	if(name[length] == 10)
+		break;
+	length += 1;
+    }
+
+    // Also finds for a free lock while checking for free ones
+    for(int i = 0; i < P1_MAXLOCKS; i++){
+    	if(locks[i].inuse == FALSE)
+		break;
+	if(i == P1_MAXLOCKS - 1)
+		return P1_TOO_MANY_LOCKS;
+	freeIndex += 1;
+    }
+
+    for(int i = 0; i < P1_MAXLOCKS; i++){
+	if(!strcmp(locks[i].name,name))
+		return P1_DUPLICATE_NAME;
+    }
+
+    // find an unused Lock and initialize it
+    locks[freeIndex].inuse = TRUE;
+    strcpy(locks[freeIndex].name,name);
+    *lid = locks[freeIndex].lid;
+
+    // restore interrupts
+    if(interrupt == TRUE)
+    	P1EnableInterrupts();
+    return result;
+}
