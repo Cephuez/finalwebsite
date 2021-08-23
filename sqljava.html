@@ -38,55 +38,50 @@
             and you will be navigated to the project's layout. Since I used tables for this 
             SQL project, <a href="sql_text.txt">click here</a> to have a reference of it. 
             It's a little tricky to demonstrate a demo of my project since it requires
-            me to access my University's server which I don't have any access to anymore. 
+            me to access my University's server which I don't have access to anymore. 
             I will try to do my best to explain the project while backing it up with 
-            screenshots of my code.
+            screenshots.
         </h2>
 
         <h2>
-            For my pet adoption website, a user is allowed to access it if they are registered
-            users. Like other websites, they register in through the register page by inputting
+            For my pet adoption website, a user needs to have a register before logging into 
+            the website. Like any other websites, they register by inputting
             their personal information. They also have the option to register as a sender 
-            and input information of the pet they are sending out. I limited the breeds to 
-            dog, cat, and rabbit only. Once registered, they can log in and view the pets 
-            currently available for adoption and mark favorites to view them again. These
-            are the main points, and I will try to explain them further down.
+            and input information of the pet they are sending out. Since I only allowed dogs, 
+            cats, and rabbits to put up for adoption, only information for those pets will be asked.
+            Once registered, they can log in to view any pets currently available for 
+            adoption and mark favorites to view them again. Once the user is done, they can 
+            log out of the site.
         </h2>
 
         <div id="description">
             <img src="Images/PetAdopt.png" id="img">
-            <p> In order to access the page, the
-                user needs to have a membership. If the user does not have a membership, then
-                they can register by clicking the 'register' button.
+            <p> In order to access the page, the user needs to have a membership. For my 
+                project, the user needs to register using their email. If they are wrong,
+                then they will be prompted again. For any new users, they can click the
+                register button to make their own account.
             </p>
         </div>
 
         <div id="description">
             <img src="Images/PetAdopt1.png" id="img">
             <p> In the registration page, you are prompt to put in information about yourself: 
-                email, name, self introduction, location, birthday, if you are an adopter, if you
-                are a sender, and your adopting experience. Using PreparedStatement I used the code in the picture. 
-                This will submit the information under the table Member.
+                email, name, self introduction, location, and birthday. You will also be asked if
+                you are an adopter or a sender. If you register as a sender, then you will
+                be asked to register your pet. Using PreparedStatements as shown in the picture, 
+                the person's information will be added under Member table to keep track of their
+                information in the server.
             </p>
         </div>
 
         <div id="description">
             <img src="Images/PetAdopt2.png" id="img">
-            <p> If you register as a sender, then you are asked with further questions about
-                what kind of pet you want to set up for adoption. The only breed types I set up
-                were rabbit, dog, and cat. If you picked a cat for example, then you would 
-                type the pet's name, birthday, and if it's sterilized. The program would then link 
-                the pet to the member's email to track its owner. 
-            </p>
-        </div>
-
-        <div id="description">
-            <img src="Images/PetAdopt2.png" id="img">
-            <p> If you register as a sender, then you are asked with further questions about
-                what kind of pet you want to set up for adoption. The only breed types I set up
-                were rabbit, dog, and cat. If you picked a cat for example, then you would 
-                type the pet's name, birthday, and if it's sterilized. The program would then link 
-                the pet to the member's email to track its owner. 
+            <p> If you register as a sender, then you're asked with further questions about
+                the kind of pet you are setting up for adoption. The primary questions asked for 
+                a pet would be their name, birthday, breed, and if they are sterilized. Extra questions 
+                will be asked for a dog if they require a number of days to be walked, or if a rabbit 
+                tends to bite things. Once the user input this information, the information will be 
+                added to the server plus the user's email in order to track the pet's sender.
             </p>
         </div>
 
