@@ -2,7 +2,7 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unity Project</title>
+    <title>CPU Simulator Project</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="stylesqljava.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,38 +27,51 @@
             </nav>
     
             <div class="text-box">
-                <h1>Examples of Unity Projects</h1>    
+                <h1>CPU Simulator Project</h1>    
             </div>
         </section>
 
+        <h2>
+            For my CPU project, a few milestones needed to be reached before moving 
+            to more advance coding. For the first part, I needed to code the processes 
+            that the computer will have to run during Kernel mode. This is where I check 
+            that the computer is not running in User mode, and running my processes in 
+            multi-thread. The second part is allowing user-level processes to use system 
+            services, but not directly called it in user mode either. This is where I 
+            will code in drivers to handle these kernel processes such as clock and 
+            disk drivers. Finally, the last part would be storing information in virtual
+            memory. I used paging to have a specific size of chunk, and used page replacement
+            algorithm such as FIFO, MIN, LRU, and LFU to sort these pages into open space.
+        </h2>
 
-        <p>
-            A quick summary of programming my CPU project in C. I worked with processes and threadings 
-            in order to make sure that memory management is not disrupted. I made sure 
-            to synchronize my program to ensure mutual exclusion and critical section. 
-            If I were to allow processes to input information without an order, then 
-            memory would be updated too soon or late for it to be accessed. 
-        </p>
         <div id="description">
             <img src="Images/HuskyPic.jpg" id="img">
             <p> 
-                I made sure to code in the <a href="CPUCodeText/CPULocks1.txt">locks</a> 
-                and <a href="CPUCodeText/CPUCond1.txt">conditions</a> so I can know what 
-                processes to use when active. If you want to view my code in more details 
-                on how I lock processes, free them, etc, I have linked my project to the
-                site at the top under phase1a, phase1b, phase1c, and phase1d.
+                For the first phase, I coded in processes to be created in Kernel mode. Each process
+                would be unique by having an ID. These processes will be used later to have roles
+                in storing information, removing, etc. Once my processes are coded, then I have to code 
+                in <a href="CPUCodeText/CPULocks1.txt">locks</a> 
+                and <a href="CPUCodeText/CPUCond1.txt">conditions</a>. This would allow me 
+                to use threads to allow certain processes to be run first before other, aka
+                mutual exclusion and critical section. You can view how I code this part 
+                in my <a href="https://github.com/Cephuez/PastProjects/tree/main/Simulate%20CPU%20Project">project page</a>
             </p>
         </div>
 
         <div id="description">
             <img src="Images/HuskyPic.jpg" id="img">
-            <p> Using locks and conditions in order to organize my processes, I was able
-                to use <a href="CPUCodeText/CPUHandlers1.txt">System Call Handlers</a>. Some examples is calling 'Wait' for a proccess
+            <p> Now that I had working processes, my next task is for user processes to call kernel
+                processes. This would allow <a href="CPUCodeText/CPUHandlers1.txt">system calls</a>. 
+                to handle kernel processes like calling 'Wait' for a proccess
                 to hault, 'Terminate' to delete a process, 'GetPid' to get the process' ID, 
                 and 'GetTimeOfDay' to get the time of the day set on the CPU. All of these
                 handlers are stored inside an array of Interrupt Vectors. Depending if it is 
                 an Illegal Interrupt or System Call, it will call certain handlers to deal with 
-                the issue. Check Phase2a-Phase2d.
+                the issue. Since these handlers are very important, they will be proccesses run at number 1 
+                priority over any other processes. Furthermore, now that I have handlers set up, I 
+                can code in Disk write and read. User processes can call Kernel processes to handle 
+                writing and reading of disks. This will build up the code to manage memory in 
+                virtual space for my last part. View Phase2A-Phase2D for this part.
             </p>
         </div>
 
@@ -68,9 +81,20 @@
                 give them a position in the storage space. I approached it through paging in 
                 <a href="CPUCodeText/CPUFrame.txt">frames</a>. These frames are giving a process ID
                 to distinguish it from other processes, page boolean to see if it's set up, and 
-                a free boolean to see if that area is free to be accessed or not. Look under Phase3a
-                and Phase3b for further details.
+                a free boolean to see if that area is free to be accessed or not. I set up an array size 
+                of pages called Page Table. This is where all the pages would be allocated into. Check 
+                phase3A-Phase3B for this part.
             </p>
         </div>
+
+        <h2>
+            For this project, I learned how to multi-thread with process and making sure that
+            processes start, stop, or terminate at the correct time. Otherwise, the 
+            CPU's memory management would be all over the place. I coded my own virtual 
+            memory space where pages are assigned into and apply algorithms to store them
+            in the fastest and least space possible. I wrote into disk and read them from 
+            a user level by making kernel mode do all the work. This would prevent user mode 
+            from damaging any part of the CPU if they had full access of kernel mode.
+        </h2>
     </body>
 </html>
