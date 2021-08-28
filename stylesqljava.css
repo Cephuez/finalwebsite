@@ -2,6 +2,11 @@ html, body, *{
     padding: 0;
     margin: 0;
 }
+
+#end {
+    padding-bottom: 50;
+}
+
 #description{
     /*height: 70%;*/
     margin: 0;
