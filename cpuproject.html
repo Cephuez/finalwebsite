@@ -54,13 +54,16 @@
         </h2>
 
         <div id="description">
-            <img src="Images/HuskyPic.jpg" id="img">
+            <a href="http://cs.sru.edu/~mullins/cpsc100book/module02_introduction/module02-01_introduction.html">
+                <img src="Images/process.jpg" id="img">
+            </a>
             <p> 
                 For the first phase, I coded in processes to be created in Kernel mode. Each process
-                would be unique by having an ID. These processes will be used later to have roles
-                in storing information, removing, etc. Once my processes are coded, then I have to code 
+                will be unique by having an ID. These processes will be used later to 
+                store information, removing, or whatever role they are given. 
+                Once my processes are coded, then I have to code 
                 in <a href="CPUCodeText/CPULocks1.txt">locks</a> 
-                and <a href="CPUCodeText/CPUCond1.txt">conditions</a>. This would allow me 
+                and <a href="CPUCodeText/CPUCond1.txt">conditions</a>. This allow me 
                 to use threads to allow certain processes to be run first before other, aka
                 mutual exclusion and critical section. You can view how I code this part 
                 in my <a href="https://github.com/Cephuez/PastProjects/tree/main/Simulate%20CPU%20Project">project page</a>
@@ -68,7 +71,9 @@
         </div>
 
         <div id="description">
-            <img src="Images/HuskyPic.jpg" id="img">
+            <a href="https://www.geeksforgeeks.org/user-mode-and-kernel-mode-switching/">
+            <img src="Images/kernel_user_mode.png" id="img">
+            </a>
             <p> Now that I had working processes, my next task is for user processes to call kernel
                 processes. This would allow <a href="CPUCodeText/CPUHandlers1.txt">system calls</a>. 
                 to handle kernel processes like calling 'Wait' for a proccess
@@ -85,7 +90,9 @@
         </div>
 
         <div id="description">
-            <img src="Images/HuskyPic.jpg" id="img">
+            <a href="https://www.geeksforgeeks.org/difference-between-paging-and-segmentation/">
+            <img src="Images/page_frame.png" id="img">
+            </a>
             <p> When it came to storing data into memory, I used virtual addresses in order to 
                 give them a position in the storage space. I approached it through paging in 
                 <a href="CPUCodeText/CPUFrame.txt">frames</a>. These frames are giving a process ID
